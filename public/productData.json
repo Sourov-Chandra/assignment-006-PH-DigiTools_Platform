@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Plan",
+    "description": "Perfect for beginners to create simple resumes.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "10+ templates",
+      "Basic customization",
+      "Export to PDF"
+    ],
+    "icon": "https://i.ibb.co.com/W48C0YXh/design-tool.png",
+    "buyNowButton": "Buy Now"
+  },
+  {
+    "id": 2,
+    "name": "Basic Plan",
+    "description": "Ideal for individuals starting their career.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "50+ templates",
+      "ATS optimization",
+      "Export to PDF & Word"
+    ],
+    "icon": "https://i.ibb.co.com/vCRLpDWq/operation.png",
+    "buyNowButton": "Buy Now"
+  },
+  {
+    "id": 3,
+    "name": "Pro Plan",
+    "description": "Advanced features for professionals.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "100+ templates",
+      "Advanced customization",
+      "Cover letter builder"
+    ],
+    "icon": "https://i.ibb.co.com/239b2J1H/portfolio.png",
+    "buyNowButton": "Buy Now"
+  },
+  {
+    "id": 4,
+    "name": "Premium Plan",
+    "description": "Complete package for career growth.",
+    "price": 49,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Unlimited templates",
+      "AI suggestions",
+      "Export in multiple formats"
+    ],
+    "icon": "https://i.ibb.co.com/7xZ8t702/shopping-cart.png",
+    "buyNowButton": "Buy Now"
+  },
+  {
+    "id": 5,
+    "name": "Enterprise Plan",
+    "description": "Best for teams and organizations.",
+    "price": 99,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Team collaboration",
+      "Custom branding",
+      "Priority support"
+    ],
+    "icon": "https://i.ibb.co.com/Dg92Zgkx/social-media.png",
+    "buyNowButton": "Buy Now"
+  },
+  {
+    "id": 6,
+    "name": "Student Plan",
+    "description": "Affordable option for students.",
+    "price": 5,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "30+ templates",
+      "Basic ATS support",
+      "Download PDF"
+    ],
+    "icon": "https://i.ibb.co.com/q368qvLH/writing-2327400-1.png",
+    "buyNowButton": "Buy Now"
+  }
+]
