@@ -1,6 +1,7 @@
 import React, { use, useState } from "react";
 import Card from "../card/Card";
 import { IoCartOutline } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 const Products = ({ productsPromise, cart, setCart }) => {
   const products = use(productsPromise);
@@ -21,7 +22,6 @@ const Products = ({ productsPromise, cart, setCart }) => {
     <div>
       <section className="w-full bg-white mt-22">
         <div className="container mx-auto px-6">
-          
           <div className="flex flex-col justify-center items-center text-center space-y-4 mb-10">
             <h2 className="font-extrabold text-4xl">Premium Digital Tools</h2>
             <p className="text-gray-400 text-sm max-w-md">
@@ -82,7 +82,6 @@ const Products = ({ productsPromise, cart, setCart }) => {
                 </div>
               ) : (
                 <div className="flex flex-col gap-4">
-                  
                   <h3 className="text-lg font-bold text-gray-900">Your Cart</h3>
 
                   <div className="flex flex-col divide-y divide-gray-100">
@@ -91,7 +90,6 @@ const Products = ({ productsPromise, cart, setCart }) => {
                         key={item.id}
                         className="flex items-center gap-4 py-4"
                       >
-                        
                         <div className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center shrink-0">
                           <img
                             src={item.icon}
@@ -110,7 +108,13 @@ const Products = ({ productsPromise, cart, setCart }) => {
                         </div>
 
                         <button
-                          onClick={() => removeFromCart(item.id)}
+                          onClick={() => {
+                            removeFromCart(item.id);
+                            toast.error(`${item.name} removed from cart!`, {
+                              position: "top-right",
+                              autoClose: 2000,
+                            });
+                          }}
                           className="text-xs font-medium text-red-400 hover:text-red-600 transition-colors"
                         >
                           Remove
@@ -128,9 +132,10 @@ const Products = ({ productsPromise, cart, setCart }) => {
 
                   <button
                     onClick={() => {
-                      setCart([]);
-                      setActiveTab("products");
-                    }}
+                    setCart([]);
+                    setActiveTab("products");
+                    toast.success("Order placed successfully!");
+                      }}
                     className="w-full text-sm font-semibold text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:opacity-90 active:scale-95 transition-all duration-150 py-3.5 rounded-full mt-2"
                   >
                     Proceed To Checkout

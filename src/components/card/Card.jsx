@@ -1,4 +1,5 @@
 import { FiCheck } from "react-icons/fi";
+import { toast } from "react-toastify";
 
 const tagStyles = {
   new: "bg-green-50 text-green-500",
@@ -83,8 +84,11 @@ const Card = ({
 
       {isCartView ? (
         <button
-          onClick={() => onRemoveFromCart(product.id)}
-          className="mt-auto w-full text-sm font-semibold text-red-500 border border-red-200 hover:bg-red-50 active:scale-95 transition-all duration-150 px-4 py-3 rounded-full"
+            onClick={() => {
+            onRemoveFromCart(product.id);
+    }}
+          className="mt-auto w-full text-sm font-semibold text-red-500 border border-red-200 hover:bg-red-50 active:scale-95
+          transition-all duration-150 px-4 py-3 rounded-full"
         >
           Remove from Cart
         </button>
@@ -97,7 +101,14 @@ const Card = ({
         </button>
       ) : (
         <button
-          onClick={() => onAddToCart(product)}
+          onClick={() => {
+            onAddToCart(product);
+            toast.success(`${name} added to cart!`, {
+      position: "top-right",
+      autoClose: 2000,
+    });
+          }
+          }
           className="mt-auto w-full text-sm font-semibold text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:opacity-90 active:scale-95 transition-all duration-150 px-4 py-3 rounded-full"
         >
           {buyNowButton}
