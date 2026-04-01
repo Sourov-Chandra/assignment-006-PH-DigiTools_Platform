@@ -20,10 +20,10 @@ const Products = ({ productsPromise, cart, setCart }) => {
 
   return (
     <div>
-      <section className="w-full bg-white mt-22">
+      <section className="w-full bg-white pt-22">
         <div className="container mx-auto px-6">
           <div className="flex flex-col justify-center items-center text-center space-y-4 mb-10">
-            <h2 className="font-extrabold text-4xl">Premium Digital Tools</h2>
+            <h2 className="font-extrabold text-black text-4xl">Premium Digital Tools</h2>
             <p className="text-gray-400 text-sm max-w-md">
               Choose from our curated collection of premium digital products
               designed to boost your productivity and creativity.
